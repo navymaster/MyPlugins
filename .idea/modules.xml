@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EnhanceFrameWork/EhanceFrameWork.iml" filepath="$PROJECT_DIR$/EnhanceFrameWork/EhanceFrameWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnhanceFrameWork/EnhanceFrameWork.iml" filepath="$PROJECT_DIR$/EnhanceFrameWork/EnhanceFrameWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyPlugins.iml" filepath="$PROJECT_DIR$/MyPlugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recipes/Recipes.iml" filepath="$PROJECT_DIR$/Recipes/Recipes.iml" />
       <module fileurl="file://$PROJECT_DIR$/WizardStaff/WizardStaff.iml" filepath="$PROJECT_DIR$/WizardStaff/WizardStaff.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />

@@ -10,7 +10,7 @@
     <version>1.0.0-RELEASE</version>
     <modules>
         <module>Recipes</module>
-        <module>EhanceFrameWork</module>
+        <module>EnhanceFrameWork</module>
         <module>example</module>
         <module>WizardStaff</module>
     </modules>

@@ -6,14 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="EhanceFrameWork" />
         <module name="Recipes" />
+        <module name="EnhanceFrameWork" />
         <module name="WizardStaff" />
         <module name="example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="EhanceFrameWork" target="11" />
+      <module name="EnhanceFrameWork" target="11" />
       <module name="example" target="11" />
       <module name="MoreRecipes" target="8" />
       <module name="MyPlugins" target="11" />
