@@ -1,0 +1,5 @@
+# Project exclude paths
+/EnhanceFrameWork/target/
+/example/target/
+/Recipes/target/
+/WizardStaff/target/

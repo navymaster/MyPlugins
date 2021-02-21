@@ -1,0 +1,18 @@
+name: more_recipes
+main: MoreRecipes
+version: 0.1
+api-version: 1.13
+author: navy_master
+commands:
+  sethome:
+    description: set the home of you
+    usage: /<command>
+  home:
+    description: back to the home of you
+    usage: /<command>
+  assemble:
+    description: call everyone tp to you
+    usage: /<command>
+  response:
+    description: tp to the assemble place
+    usage: /<command>

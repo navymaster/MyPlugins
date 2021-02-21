@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EhanceFrameWork" />
+        <module name="Recipes" />
+        <module name="WizardStaff" />
+        <module name="example" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EhanceFrameWork" target="11" />
+      <module name="example" target="11" />
+      <module name="MoreRecipes" target="8" />
+      <module name="MyPlugins" target="11" />
+      <module name="plugin" target="8" />
+      <module name="QQsocket" target="8" />
+      <module name="Recipes" target="11" />
+      <module name="WizardStaff" target="11" />
+      <module name="WizardStaff (1)" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

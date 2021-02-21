@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MoreRecipes:jar">
+    <output-path>E:/mc_server/plugins</output-path>
+    <root id="archive" name="MoreRecipes.jar">
+      <element id="module-output" name="MoreRecipes" />
+    </root>
+  </artifact>
+</component>

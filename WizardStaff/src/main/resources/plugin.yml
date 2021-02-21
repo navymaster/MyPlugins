@@ -1,0 +1,14 @@
+main: WizardStaffMain
+name: wizard_staff
+version: 1.1.0
+api-version: 1.13
+author: navy_master
+commands:
+  playerhandbook:
+    description: get the player's handbook
+    aliases: phb
+    usage: /<command>
+  setplayerhandbook:
+    description: set the player's handbook
+    aliases: setphb
+    usage: /<command>
