@@ -10,23 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7318ba-7466-4588-96e2-55293d6646f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_itranswarp_compiler_1_0.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/UnsupportedEventException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceFrameWork.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceHandle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/resources/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/resources/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/example/example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +60,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectId" id="1nocXhhDzBLYZwJEiKwrBSpXkts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -76,10 +67,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ChangesTree.GroupingKeys" value="module&#10;directory" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WizardStaff/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -106,9 +98,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClassBuildTest">
+  <component name="RunManager" selected="Application.GetNameTest">
     <configuration name="ClassBuildTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClassBuildTest" />
+      <module name="EnhanceFrameWork" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetNameTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GetNameTest" />
       <module name="EnhanceFrameWork" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,55 +120,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="EnhanceFrameWork" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="EnhanceFrameWork" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GetNameTest" />
         <item itemvalue="Application.SocketTest" />
       </list>
     </recent_temporary>
@@ -197,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613918092740</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="make framework more FRAMEWORK">
+      <created>1613965077017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613965077017</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,7 +178,8 @@
       <path value="G:/git_spigotplugin" />
     </ignored-roots>
     <MESSAGE value="normal update" />
-    <option name="LAST_COMMIT_MESSAGE" value="normal update" />
+    <MESSAGE value="make framework more FRAMEWORK" />
+    <option name="LAST_COMMIT_MESSAGE" value="make framework more FRAMEWORK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

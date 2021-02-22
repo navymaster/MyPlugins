@@ -12,6 +12,8 @@ Magic:
   THUNDER_CALLING: true
   HOLD_MONSTER: true
   TELEPORT: true
+  HEAL_WIND: true
+  CALL_BACK: true
 #这是默认的玩家手册数据，如果你需要更改它，你可以直接通过setphb指令来做，或者，你非要在这里改，那就祝你好运。
 phbdata:
   ==: org.bukkit.inventory.ItemStack

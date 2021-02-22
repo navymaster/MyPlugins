@@ -12,8 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.enchantment.EnchantItemEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -51,10 +50,10 @@ public class WizardStaffListener implements Listener {
                     is.setItemMeta(im);
                     e.getPlayer().getInventory().addItem(is);
                 }
-                ItemStack is=new ItemStack(Material.STICK);
+                ItemStack is=new ItemStack(Material.GOLDEN_HELMET);
                 ItemMeta im=is.getItemMeta();
                 List<String> l=new ArrayList<>();
-                l.add("FIRE_BALL<4/4>");
+                l.add("TEST");
                 im.setLore(l);
                 is.setItemMeta(im);
                 e.getPlayer().getInventory().addItem(is);
@@ -234,4 +233,15 @@ public class WizardStaffListener implements Listener {
     public void default_magic_handle(PlayerInteractEvent e){
         MagicManager.handle_all(e,this);
     }
+
+    @EventHandler
+    public void default_magic_handle(PlayerItemDamageEvent e){
+        MagicManager.handle_all(e,this);
+    }
+    @EventHandler
+    public void default_magic_handle(PlayerMoveEvent e){
+        MagicManager.handle_all(e,this);
+    }
+
+
 }

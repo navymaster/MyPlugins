@@ -3,4 +3,3 @@ name: example
 version: 1.0.0
 api-version: 1.13
 author: navy_master
-depend: [ehanceframework]

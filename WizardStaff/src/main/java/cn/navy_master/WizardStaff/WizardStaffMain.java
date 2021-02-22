@@ -6,12 +6,15 @@ import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
@@ -404,5 +407,42 @@ public class WizardStaffMain extends JavaPlugin {
             };
             mm.register_magic("TELEPORT", TELEPORT);
         }
+        if(defualt_magic.containsKey("HEAL_WIND")) {
+            install=defualt_magic.get("HEAL_WIND");
+        }else{
+            install=true;
+            defualt_magic.put("HEAL_WIND",true);
+        }
+        if(install) {
+            //治愈之风
+            MagicExecutor HEAL_WIND = new MagicExecutor(PlayerMoveEvent.class,100, true) {
+                @Override
+                public boolean runMagic(LivingEntity Caster) {
+                    Caster.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION,40,5,false,false));
+                    return true;
+                }
+            };
+            mm.register_magic("HEAL_WIND", HEAL_WIND);
+        }
+        if(defualt_magic.containsKey("CALL_BACK")) {
+            install=defualt_magic.get("CALL_BACK");
+        }else{
+            install=true;
+            defualt_magic.put("CALL_BACK",true);
+        }
+        if(install) {
+            //召还
+            MagicExecutor CALL_BACK = new MagicExecutor(PlayerItemDamageEvent.class,20, true) {
+                @Override
+                public boolean runMagic(LivingEntity Caster) {
+                    if (Player.class.isAssignableFrom(Caster.getClass())) {
+                        ((Player)Caster).setTotalExperience(((Player)Caster).getTotalExperience()+1);
+                    }
+                    return true;
+                }
+            };
+            mm.register_magic("CALL_BACK", CALL_BACK);
+        }
+
     }
 }
