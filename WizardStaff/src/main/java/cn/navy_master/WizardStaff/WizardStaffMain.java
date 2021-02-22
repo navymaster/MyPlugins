@@ -9,7 +9,6 @@ import org.bukkit.entity.*;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -77,23 +76,20 @@ public class WizardStaffMain extends JavaPlugin {
     public void register_default(){
         MagicManager mm=new MagicManager(this);
         boolean install;
-        Map<String,Boolean> defualt_magic;
-        defualt_magic=new HashMap<>();
+        Map<String,Boolean> defaults_magic;
+        defaults_magic=new HashMap<>();
         if(!Objects.isNull(WizardStaffMain.FC.get("Magic"))){
             ConfigurationSection cs =WizardStaffMain.FC.getConfigurationSection("Magic");
-            //defualt_magic=(Map<String,Boolean>)WizardStaffMain.FC.get("Magic");
-            //defualt_magic=new HashMap<>();
             for(String key : cs.getKeys(false)) {
-                defualt_magic.put(key,(Boolean) cs.get(key));
-                //System.out.println(key + " = " + cs.get(key));
+                defaults_magic.put(key,(Boolean) cs.get(key));
             }
         }
 
-        if(defualt_magic.containsKey("FIRE_BALL")) {
-            install=defualt_magic.get("FIRE_BALL");
+        if(defaults_magic.containsKey("FIRE_BALL")) {
+            install=defaults_magic.get("FIRE_BALL");
         }else{
             install=true;
-            defualt_magic.put("FIRE_BALL",true);
+            defaults_magic.put("FIRE_BALL",true);
         }
 
         if(install) {
@@ -113,11 +109,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("FIRE_BALL", FIRE_BALL);
         }
 
-        if(defualt_magic.containsKey("FLAME_ARROW")) {
-            install=defualt_magic.get("FLAME_ARROW");
+        if(defaults_magic.containsKey("FLAME_ARROW")) {
+            install=defaults_magic.get("FLAME_ARROW");
         }else{
             install=true;
-            defualt_magic.put("FLAME_ARROW",true);
+            defaults_magic.put("FLAME_ARROW",true);
         }
         if(install) {
             //火焰箭
@@ -137,11 +133,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("FLAME_ARROW", FLAME_ARROW);
         }
 
-        if(defualt_magic.containsKey("THUNDER_WAVE")) {
-            install=defualt_magic.get("THUNDER_WAVE");
+        if(defaults_magic.containsKey("THUNDER_WAVE")) {
+            install=defaults_magic.get("THUNDER_WAVE");
         }else{
             install=true;
-            defualt_magic.put("THUNDER_WAVE",true);
+            defaults_magic.put("THUNDER_WAVE",true);
         }
         if(install) {
             //雷鸣波
@@ -165,11 +161,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("THUNDER_WAVE", THUNDER_WAVE);
         }
 
-        if(defualt_magic.containsKey("SHATTER")) {
-            install=defualt_magic.get("SHATTER");
+        if(defaults_magic.containsKey("SHATTER")) {
+            install=defaults_magic.get("SHATTER");
         }else{
             install=true;
-            defualt_magic.put("SHATTER",true);
+            defaults_magic.put("SHATTER",true);
         }
         if(install) {
             //粉碎音波
@@ -198,11 +194,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("SHATTER", SHATTER);
         }
 
-        if(defualt_magic.containsKey("MAGIC_MISSILE")) {
-            install=defualt_magic.get("MAGIC_MISSILE");
+        if(defaults_magic.containsKey("MAGIC_MISSILE")) {
+            install=defaults_magic.get("MAGIC_MISSILE");
         }else{
             install=true;
-            defualt_magic.put("MAGIC_MISSILE",true);
+            defaults_magic.put("MAGIC_MISSILE",true);
         }
         if(install) {
             //魔法飞弹
@@ -266,11 +262,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("MAGIC_MISSILE", MAGIC_MISSILE);
         }
 
-        if(defualt_magic.containsKey("FROST_ARMOR")) {
-            install=defualt_magic.get("FROST_ARMOR");
+        if(defaults_magic.containsKey("FROST_ARMOR")) {
+            install=defaults_magic.get("FROST_ARMOR");
         }else{
             install=true;
-            defualt_magic.put("FROST_ARMOR",true);
+            defaults_magic.put("FROST_ARMOR",true);
         }
         if(install) {
             //冰铠
@@ -288,11 +284,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("FROST_ARMOR", FROST_ARMOR);
         }
 
-        if(defualt_magic.containsKey("THUNDER_CALLING")) {
-            install=defualt_magic.get("THUNDER_CALLING");
+        if(defaults_magic.containsKey("THUNDER_CALLING")) {
+            install=defaults_magic.get("THUNDER_CALLING");
         }else{
             install=true;
-            defualt_magic.put("THUNDER_CALLING",true);
+            defaults_magic.put("THUNDER_CALLING",true);
         }
         if(install) {
             //召雷术
@@ -311,11 +307,11 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("THUNDER_CALLING", THUNDER_CALLING);
         }
 
-        if(defualt_magic.containsKey("HOLD_MONSTER")) {
-            install=defualt_magic.get("HOLD_MONSTER");
+        if(defaults_magic.containsKey("HOLD_MONSTER")) {
+            install=defaults_magic.get("HOLD_MONSTER");
         }else{
             install=true;
-            defualt_magic.put("HOLD_MONSTER",true);
+            defaults_magic.put("HOLD_MONSTER",true);
         }
         if(install) {
             //怪物定身术
@@ -351,16 +347,17 @@ public class WizardStaffMain extends JavaPlugin {
             mm.register_magic("HOLD_MONSTER", HOLD_MONSTER);
         }
 
-        if(defualt_magic.containsKey("TELEPORT")) {
-            install=defualt_magic.get("TELEPORT");
+        if(defaults_magic.containsKey("TELEPORT")) {
+            install=defaults_magic.get("TELEPORT");
         }else{
             install=true;
-            defualt_magic.put("TELEPORT",true);
+            defaults_magic.put("TELEPORT",true);
         }
         if(install) {
             //传送术
             MagicExecutor TELEPORT = new MagicExecutor(PlayerInteractEvent.class,0, true) {
                 @Override
+                @SuppressWarnings("deprecation")
                 public boolean runMagic(LivingEntity Caster) {
                     if (Player.class.isAssignableFrom(Caster.getClass())) {
                         Inventory inventory = Bukkit.createInventory((Player) Caster, 9 * 6, "teleport_target");
@@ -407,11 +404,11 @@ public class WizardStaffMain extends JavaPlugin {
             };
             mm.register_magic("TELEPORT", TELEPORT);
         }
-        if(defualt_magic.containsKey("HEAL_WIND")) {
-            install=defualt_magic.get("HEAL_WIND");
+        if(defaults_magic.containsKey("HEAL_WIND")) {
+            install=defaults_magic.get("HEAL_WIND");
         }else{
             install=true;
-            defualt_magic.put("HEAL_WIND",true);
+            defaults_magic.put("HEAL_WIND",true);
         }
         if(install) {
             //治愈之风
@@ -424,11 +421,11 @@ public class WizardStaffMain extends JavaPlugin {
             };
             mm.register_magic("HEAL_WIND", HEAL_WIND);
         }
-        if(defualt_magic.containsKey("CALL_BACK")) {
-            install=defualt_magic.get("CALL_BACK");
+        if(defaults_magic.containsKey("CALL_BACK")) {
+            install=defaults_magic.get("CALL_BACK");
         }else{
             install=true;
-            defualt_magic.put("CALL_BACK",true);
+            defaults_magic.put("CALL_BACK",true);
         }
         if(install) {
             //召还

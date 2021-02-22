@@ -3,16 +3,10 @@ package org.example;
 import cn.navy_master.ehanceframework.MagicExecutor;
 import cn.navy_master.ehanceframework.MagicManager;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.World;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Fireball;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
@@ -67,7 +61,7 @@ public class ExampleMagic extends JavaPlugin implements Listener {
      * 由于对于动态生成监听器的尝试失败了，我们不得不手动监听后传递<br>
      * 如果有多个插件使用EnhanceFrameWork,它们可以分别注册对应监听<br>
      * 不必担心法术被多次执行，监听相同事件类型的函数中只有一个会生效
-     * @param e
+     * @param e 捕获事件
      */
     @EventHandler
     public void handleTest(BlockBreakEvent e){

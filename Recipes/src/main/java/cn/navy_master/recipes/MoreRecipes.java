@@ -5,7 +5,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MoreRecipes extends JavaPlugin {
-    public static MoreRecipes oneinstance;
+    public static MoreRecipes instance;
     public boolean debug_mode=true;
     public static FileConfiguration conf;
     @Override
@@ -21,7 +21,7 @@ public class MoreRecipes extends JavaPlugin {
         Bukkit.getPluginCommand("assemble").setExecutor(a);
         Bukkit.getPluginCommand("response").setExecutor(a);
         saveDefaultConfig();
-        oneinstance=this;
+        instance =this;
     }
 
     @Override

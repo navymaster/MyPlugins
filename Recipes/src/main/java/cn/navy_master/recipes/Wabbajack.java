@@ -67,7 +67,7 @@ public class Wabbajack implements Listener {
                     }
                 }
             }catch(NullPointerException n){
-
+                n.printStackTrace();
             }
         }
     }

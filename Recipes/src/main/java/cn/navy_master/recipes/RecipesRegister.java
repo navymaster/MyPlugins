@@ -15,9 +15,10 @@ import java.util.List;
 import java.util.UUID;
 
 public class RecipesRegister {
+    @SuppressWarnings("deprecation")
     public static void Reg(){
         ItemStack result=new ItemStack(Material.LEATHER);
-        FurnaceRecipe FR=new FurnaceRecipe(NamespacedKey.minecraft("more_recipes_for_wizardstaff"),result,Material.ROTTEN_FLESH,(float)0.1,200);
+        FurnaceRecipe FR=new FurnaceRecipe(NamespacedKey.minecraft("more_recipes_for_wizard_staff"),result,Material.ROTTEN_FLESH,(float)0.1,200);
         Bukkit.getServer().addRecipe(FR);
         //链甲
         result=new ItemStack(Material.CHAINMAIL_BOOTS);
@@ -27,7 +28,7 @@ public class RecipesRegister {
         Bukkit.getServer().addRecipe(sr);
 
         result=new ItemStack(Material.CHAINMAIL_CHESTPLATE);
-        sr=new ShapedRecipe(NamespacedKey.minecraft("chain_chestplate"),result);
+        sr=new ShapedRecipe(NamespacedKey.minecraft("chain_chest_plate"),result);
         sr.shape("x x","xxx","xxx");
         sr.setIngredient('x',Material.CHAIN);
         Bukkit.getServer().addRecipe(sr);
@@ -58,7 +59,7 @@ public class RecipesRegister {
         sr.shape("xxx","xxx","xxx");
         sr.setIngredient('x',Material.POISONOUS_POTATO);
         Bukkit.getServer().addRecipe(sr);
-        ListenerForMoreRecipes.watch_poisonus_stick=is;
+        ListenerForMoreRecipes.watch_poisonous_stick =is;
 
         result=new ItemStack(Material.BLAZE_ROD);
         im=result.getItemMeta();
@@ -75,7 +76,7 @@ public class RecipesRegister {
         RecipeChoice rc=new RecipeChoice.ExactChoice(is);
         sr.setIngredient('x',rc);
         Bukkit.getServer().addRecipe(sr);
-        ListenerForMoreRecipes.watch_powered_poisonus_stick=result;
+        ListenerForMoreRecipes.watch_powered_poisonous_stick =result;
 
         //鱼棒棒
         is=new ItemStack(Material.STICK);
@@ -86,7 +87,6 @@ public class RecipesRegister {
         im.setLore(l);
         im.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,new AttributeModifier(UUID.randomUUID(),"xx",5, AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
         is.setItemMeta(im);
-        //result=new ItemStack(Material.CHAINMAIL_CHESTPLATE);
         sr=new ShapedRecipe(NamespacedKey.minecraft("fish_stick"),is);
         sr.shape("xya","bzb","ayx");
         sr.setIngredient('x',Material.COD);
@@ -121,7 +121,6 @@ public class RecipesRegister {
         l.add("可以让敌人装备松动");
         im.setDisplayName("压缩硬面包");
         im.setLore(l);
-        //im.addEnchant(Enchantment.KNOCKBACK,4,true);
         im.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,new AttributeModifier(UUID.randomUUID(),"xx",5, AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
         is.setItemMeta(im);
         sr=new ShapedRecipe(NamespacedKey.minecraft("france_bread"),is);

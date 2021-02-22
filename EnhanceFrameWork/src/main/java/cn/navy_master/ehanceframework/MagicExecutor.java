@@ -16,11 +16,11 @@ import java.util.*;
  */
 public abstract class MagicExecutor {
     private final boolean enhance;
-    private MagicManager BELONGTO;
+    private MagicManager belong_to;
     List<Class<?extends Event>> trigger;
     private final int cold_time;
-    protected void setBELONGTO(MagicManager BELONGTO) {
-        this.BELONGTO = BELONGTO;
+    protected void setBelong_to(MagicManager belong_to) {
+        this.belong_to = belong_to;
     }
     public boolean isEnhanceable() {
         return enhance;
@@ -57,8 +57,7 @@ public abstract class MagicExecutor {
         for(Class<? extends Event> cl:l)
         {
             try{
-                if(!UnsupportedEventException.have_getPlayer(cl))
-                    throw new UnsupportedEventException("The new MagicExecuter has unsupported trigger event.");
+                UnsupportedEventException.have_getPlayer(cl);
             }catch (UnsupportedEventException e){
                 e.printStackTrace();
             }
@@ -77,7 +76,7 @@ public abstract class MagicExecutor {
         try{
             if(!UnsupportedEventException.have_getPlayer(l))
             {
-                throw new UnsupportedEventException("The new MagicExecuter has unsupported trigger event.");
+                throw new UnsupportedEventException("The new MagicExecutor has unsupported trigger event.");
             }
         }catch (UnsupportedEventException e){
             e.printStackTrace();
@@ -110,18 +109,17 @@ public abstract class MagicExecutor {
      * @return 是否触发
      */
     public boolean checkEquipmentSlot(EquipmentSlot es){
-        if(es==EquipmentSlot.HAND)return true;
-        return false;
+        return es == EquipmentSlot.HAND;
     }
     /**
      * 包装过的施法执行函数，判断完冷却时间后，会执行runMagic函数
      * @param Caster 施法者
      */
-    protected void play_magic(LivingEntity Caster,EquipmentSlot es) {
+    protected void play_magic(LivingEntity Caster) {
         if (Player.class.isAssignableFrom(Caster.getClass())) {
             PlayerMagic PML = PlayerMagic.player_magics.get(Caster);
             if (PML.getCool_time() == 0) {
-                boolean suc = false;
+                boolean suc;
                 suc = runMagic(Caster);
                 if (suc) {
                     PML.setCool_time(cold_time);
@@ -134,7 +132,7 @@ public abstract class MagicExecutor {
                                 this.cancel();
                             }
                         }
-                    }.runTaskTimer(BELONGTO.plugin_INSTANCE, 1, 1);
+                    }.runTaskTimer(belong_to.plugin_INSTANCE, 1, 1);
                 }
             }
         } else {
@@ -144,10 +142,9 @@ public abstract class MagicExecutor {
     /**
      * 无冷却调用
      * @param Caster 施法者
-     * @param es 响应装备槽
      * @return 施法成功与否
      */
-    protected boolean play_magic_without_cool_time(LivingEntity Caster,EquipmentSlot es){
+    protected boolean play_magic_without_cool_time(LivingEntity Caster){
         return runMagic(Caster);
     }
 }

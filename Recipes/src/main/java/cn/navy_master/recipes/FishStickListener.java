@@ -1,8 +1,6 @@
 package cn.navy_master.recipes;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.Item;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -48,7 +46,7 @@ public class FishStickListener implements Listener {
                         break;
                 }
             }
-        }catch (NullPointerException n){
+        }catch (NullPointerException n){n.printStackTrace();
         }
     }
 }

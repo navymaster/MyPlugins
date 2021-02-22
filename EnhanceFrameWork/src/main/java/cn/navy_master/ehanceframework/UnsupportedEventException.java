@@ -22,8 +22,10 @@ public class UnsupportedEventException extends Exception {
      * @return 是否含有相应方法
      */
     public static boolean have_getPlayer(Class<? extends Event> c) throws UnsupportedEventException {
-        return get_getPlayer(c)!=null;
+        get_getPlayer(c);
+        return true;
     }
+    @SuppressWarnings("unchecked")
     protected static Method get_getPlayer(Class<? extends Event> c) throws UnsupportedEventException {
         while(c!=Event.class) {
             Method[] methods = c.getDeclaredMethods();

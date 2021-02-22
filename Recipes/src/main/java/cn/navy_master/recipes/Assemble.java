@@ -32,7 +32,7 @@ public class Assemble implements CommandExecutor {
                                 this.cancel();
                             }
                         }
-                    }.runTaskTimer(MoreRecipes.oneinstance, 1, 1);
+                    }.runTaskTimer(MoreRecipes.instance, 1, 1);
                     return true;
                 } else
                     return false;

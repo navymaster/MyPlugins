@@ -34,9 +34,9 @@ public class PlayerHandBook implements CommandExecutor {
         }
         if(command.getName().equals("setplayerhandbook")) {
             if (commandSender.isOp()) {
-                ItemStack newphb = ((Player) commandSender).getInventory().getItem(EquipmentSlot.HAND).clone();
-                setPhb(newphb);
-                WizardStaffMain.FC.set("phbdata", newphb);
+                ItemStack new_phb = ((Player) commandSender).getInventory().getItem(EquipmentSlot.HAND).clone();
+                setPhb(new_phb);
+                WizardStaffMain.FC.set("phbdata", new_phb);
                 return true;
             }
             return false;

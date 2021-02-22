@@ -18,8 +18,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static cn.navy_master.WizardStaff.WizardStaffMain.debug_mode;
 
@@ -38,6 +36,7 @@ public class WizardStaffListener implements Listener {
      * @param e 捕获的玩家进入服务器事件
      */
     @EventHandler
+    @SuppressWarnings("unchecked")
     public void handle_enter(PlayerJoinEvent e){
         if(!WizardStaffMain.player_magics.containsKey(e.getPlayer())) {
             if(debug_mode){
@@ -93,6 +92,7 @@ public class WizardStaffListener implements Listener {
      * @param e 捕获点击gui事件
      */
     @EventHandler
+    @SuppressWarnings("deprecation")
     public void handle_inventory(InventoryClickEvent e){
         if(e.getWhoClicked().getOpenInventory().getTitle().equals("teleport_target")){
             int slot=e.getRawSlot();
@@ -214,8 +214,8 @@ public class WizardStaffListener implements Listener {
             ItemMeta im = is.getItemMeta();
             a=r.nextInt(MagicManager.enhance_registered);
             int i=0;
-            /*if(EnhanceFrameWork.debug_mode)
-                Bukkit.getLogger().info(a+" "+MagicExecutor.enhance_registered);*/
+            if(WizardStaffMain.debug_mode)
+                Bukkit.getLogger().info(a+" "+ MagicManager.enhance_registered);
             for(String s:MagicManager.MagicList.keySet()){
                 if(MagicManager.MagicList.get(s).isEnhanceable())
                     if(a==i++){
