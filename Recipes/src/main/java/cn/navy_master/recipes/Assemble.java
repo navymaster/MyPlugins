@@ -1,3 +1,5 @@
+package cn.navy_master.recipes;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -16,7 +18,7 @@ public class Assemble implements CommandExecutor {
         if(command.getName().equals("assemble")){
             if(Objects.isNull(assemble_loc)) {
                 if (Entity.class.isAssignableFrom(commandSender.getClass())) {
-                    Bukkit.broadcastMessage(ChatColor.RED+"An Assemble is calling by " + commandSender.getName() + ", if you want to teleport to the sponsor, use /response in 30s:\n" +ChatColor.YELLOW+((strings.length==0)?"The sponsor is lazy, leave no reason here.":strings[0]));
+                    Bukkit.broadcastMessage(ChatColor.RED+"An cn.navy_master.recipes.Assemble is calling by " + commandSender.getName() + ", if you want to teleport to the sponsor, use /response in 30s:\n" +ChatColor.YELLOW+((strings.length==0)?"The sponsor is lazy, leave no reason here.":strings[0]));
                     assemble_loc = ((Entity) commandSender).getLocation();
                     new BukkitRunnable() {
                         int i = 600;

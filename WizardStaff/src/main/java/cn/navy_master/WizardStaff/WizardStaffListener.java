@@ -22,6 +22,8 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static cn.navy_master.WizardStaff.WizardStaffMain.debug_mode;
+
 /**
  * 插件的主监听器
  * 监听绝大多数事件
@@ -39,7 +41,7 @@ public class WizardStaffListener implements Listener {
     @EventHandler
     public void handle_enter(PlayerJoinEvent e){
         if(!WizardStaffMain.player_magics.containsKey(e.getPlayer())) {
-            if(WizardStaffMain.debug_mode){
+            if(debug_mode){
                 for(String s: MagicManager.MagicList.keySet()){
                     ItemStack is=new ItemStack(Material.STICK);
                     ItemMeta im=is.getItemMeta();
@@ -85,7 +87,6 @@ public class WizardStaffListener implements Listener {
             }
         }
     }
-    Random r=new Random();
     public static List<LivingEntity> tp_choice;
     /**
      * 检测到正在开启的gui是传送法术的gui时<br>
@@ -191,8 +192,46 @@ public class WizardStaffListener implements Listener {
             e.setCancelled(true);
         }
     }
+    Random r=new Random();
+    /**
+     * 附魔时随机法术生成
+     * 概率默认为10%
+     * @param e 捕获的附魔事件
+     */
+    @EventHandler
+    public void handle_enhance(EnchantItemEvent e) {
+        int a = r.nextInt(100);
+        if(a<10||WizardStaffMain.debug_mode) {
+            ItemStack is = e.getItem();
+            List<String> Lore;
+            try{
+                Lore= is.getItemMeta().getLore();
+                if(Objects.isNull(Lore)){
+                    Lore= new ArrayList<>();
+                }
+            }catch (NullPointerException ex){
+                Lore= new ArrayList<>();
+            }
+            ItemMeta im = is.getItemMeta();
+            a=r.nextInt(MagicManager.enhance_registered);
+            int i=0;
+            /*if(EnhanceFrameWork.debug_mode)
+                Bukkit.getLogger().info(a+" "+MagicExecutor.enhance_registered);*/
+            for(String s:MagicManager.MagicList.keySet()){
+                if(MagicManager.MagicList.get(s).isEnhanceable())
+                    if(a==i++){
+                        Bukkit.getLogger().info(s);
+                        Lore.add(s);
+                        break;
+                    }
+            }
+            im.setLore(Lore);
+            is.setItemMeta(im);
+        }
+    }
+
     @EventHandler
     public void default_magic_handle(PlayerInteractEvent e){
-        MagicManager.handle_all(e);
+        MagicManager.handle_all(e,this);
     }
 }

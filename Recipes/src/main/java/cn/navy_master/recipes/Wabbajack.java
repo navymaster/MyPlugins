@@ -1,3 +1,5 @@
+package cn.navy_master.recipes;
+
 import org.bukkit.Location;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;

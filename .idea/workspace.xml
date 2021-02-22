@@ -10,8 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7318ba-7466-4588-96e2-55293d6646f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/EhanceFrameWork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/EnhanceFrameWork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_itranswarp_compiler_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceFrameWork.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/EnhanceHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/resources/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/resources/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/example/example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +65,9 @@
         <option name="userSettingsFile" value="F:\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1nocXhhDzBLYZwJEiKwrBSpXkts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -172,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613663031432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="normal update">
+      <created>1613918092740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613918092740</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

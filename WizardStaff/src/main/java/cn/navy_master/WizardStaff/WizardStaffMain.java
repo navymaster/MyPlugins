@@ -71,8 +71,8 @@ public class WizardStaffMain extends JavaPlugin {
     /**
      * 注册默认法术的函数
      */
-    public static void register_default(){
-        MagicManager mm=new MagicManager();
+    public void register_default(){
+        MagicManager mm=new MagicManager(this);
         boolean install;
         Map<String,Boolean> defualt_magic;
         defualt_magic=new HashMap<>();

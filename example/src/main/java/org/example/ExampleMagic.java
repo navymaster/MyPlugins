@@ -26,7 +26,8 @@ public class ExampleMagic extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this,this);
-        MagicManager mm=new MagicManager();
+        MagicManager mm=new MagicManager(this);
+
         MagicExecutor FIRE_BALL = new MagicExecutor(PlayerInteractEvent.class,20, true) {
             /**
              * 你需要重载执行器的runMagic函数
@@ -59,6 +60,6 @@ public class ExampleMagic extends JavaPlugin implements Listener {
      */
     @EventHandler
     public void handle_fire_ball(PlayerInteractEvent e){
-        MagicManager.handle_all(e);
+        MagicManager.handle_all(e,this);
     }
 }

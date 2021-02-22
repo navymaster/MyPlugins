@@ -29,43 +29,4 @@ public class EnhanceHandle implements Listener {
             PlayerMagic.player_magics.put(e.getPlayer(),PML);
         }
     }
-
-    Random r=new Random();
-    /**
-     * 附魔时随机法术生成
-     * 概率默认为10%
-     * @param e 捕获的附魔事件
-     */
-    @EventHandler
-    public void handle_enhance(EnchantItemEvent e) {
-        int a = r.nextInt(100);
-        if(a<10//|| EnhanceFrameWork.debug_mode
-        ) {
-            ItemStack is = e.getItem();
-            List<String> Lore;
-            try{
-                Lore= is.getItemMeta().getLore();
-                if(Objects.isNull(Lore)){
-                    Lore= new ArrayList<>();
-                }
-            }catch (NullPointerException ex){
-                Lore= new ArrayList<>();
-            }
-            ItemMeta im = is.getItemMeta();
-            a=r.nextInt(MagicManager.enhance_registered);
-            int i=0;
-            /*if(EnhanceFrameWork.debug_mode)
-                Bukkit.getLogger().info(a+" "+MagicExecutor.enhance_registered);*/
-            for(String s:MagicManager.MagicList.keySet()){
-                if(MagicManager.MagicList.get(s).isEnhanceable())
-                    if(a==i++){
-                        Bukkit.getLogger().info(s);
-                        Lore.add(s);
-                        break;
-                    }
-            }
-            im.setLore(Lore);
-            is.setItemMeta(im);
-        }
-    }
 }

@@ -1,3 +1,5 @@
+package cn.navy_master.recipes;
+
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

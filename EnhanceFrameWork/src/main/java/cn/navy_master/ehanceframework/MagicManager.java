@@ -1,19 +1,33 @@
 package cn.navy_master.ehanceframework;
 
+import org.bukkit.Bukkit;
+import org.bukkit.event.Event;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MagicManager {
+    protected Plugin plugin_INSTANCE;
     public static HashMap<String, MagicExecutor> MagicList=new HashMap<>();
     public static int enhance_registered=0;
     private static final String reg="(^[^0-9<]+)(<(\\d+)/(\\d+)>)?";
     private static final Pattern p=Pattern.compile(reg);
+    private static List<Method> methods=new ArrayList<Method>();
+    private static List<Class<?extends Event>> events=new ArrayList<>();
+    public MagicManager(Plugin plugin){
+        plugin_INSTANCE=plugin;
+        Bukkit.getPluginManager().registerEvents(new EnhanceHandle(),plugin);
+    }
     /*private int importindex=3;
     private int methodindex=5;
     public static int unnamedListener=0;
@@ -37,7 +51,9 @@ public class MagicManager {
      * @param m 法术的执行器
      */
     public void register_magic(String name,MagicExecutor m){
+
         if(m.isEnhanceable())enhance_registered++;
+        m.setBELONGTO(this);
         MagicList.put(name,m);
          /*这一部分是尝试动态生成Listener时编写的，但运行失败，代码暂时保留。
          List<Class> l=m.trigger;
@@ -102,7 +118,31 @@ public class MagicManager {
      * 由于插件中尝试使用动态编译类失败，所以event还需要手动handle
      * @param e 传入的事件
      */
-    public static void handle_all(PlayerEvent e){
+    public static void handle_all(PlayerEvent e, Listener l){
+        if(!events.contains(e.getClass())){
+            methods.add(check_method(e,l));
+            events.add(e.getClass());
+            trytorun(e);
+        }else{
+            Method m=check_method(e,l);
+            if(methods.contains(m)){
+                trytorun(e);
+            }
+        }
+    }
+    private static Method check_method(PlayerEvent e, Listener l){
+        Method[] method=l.getClass().getDeclaredMethods();
+        for(Method m:method){
+            if(m.isAnnotationPresent(EventHandler.class)&&m.getParameterCount()==1){
+                Class<?>[] p= m.getParameterTypes();
+                if(e.getClass().isAssignableFrom(p.getClass())){
+                    return m;
+                }
+            }
+        }
+        return null;
+    }
+    private static void trytorun(PlayerEvent e){
         ItemStack is=e.getPlayer().getInventory().getItem(EquipmentSlot.HAND);
         if(Objects.isNull(is)||(!is.hasItemMeta())||(!is.getItemMeta().hasLore())){
             return;

@@ -1,3 +1,4 @@
+package cn.navy_master.recipes;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

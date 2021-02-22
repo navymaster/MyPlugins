@@ -1,7 +1,5 @@
 package cn.navy_master.ehanceframework;
 
-import cn.navy_master.ehanceframework.EnhanceFrameWork;
-import cn.navy_master.ehanceframework.PlayerMagic;
 import org.bukkit.entity.*;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -16,9 +14,13 @@ import java.util.*;
  * @version 1.0.0
  */
 public abstract class MagicExecutor {
+    protected void setBELONGTO(MagicManager BELONGTO) {
+        this.BELONGTO = BELONGTO;
+    }
+
+    private MagicManager BELONGTO;
     List<Class<?extends Event>> trigger;
     private final int cold_time;
-
     public boolean can_trigger_by(Class<?> e){
         for(Class x:trigger){
             if(x.isAssignableFrom(e))return true;
@@ -46,7 +48,6 @@ public abstract class MagicExecutor {
      * @param c 冷却时间
      * @param whenEnhance 是否在附魔时考虑（如果希望仅在自行设置的情况下获得法术词缀，则false）
      */
-    @Deprecated
     public MagicExecutor(int c,boolean whenEnhance){
         trigger=new ArrayList<>();
         trigger.add(PlayerInteractEvent.class);
@@ -104,7 +105,7 @@ public abstract class MagicExecutor {
                                 this.cancel();
                             }
                         }
-                    }.runTaskTimer(EnhanceFrameWork.INSTANCE, 1, 1);
+                    }.runTaskTimer(BELONGTO.plugin_INSTANCE, 1, 1);
                 }
             }
         }else{

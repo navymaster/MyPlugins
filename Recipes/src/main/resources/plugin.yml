@@ -1,6 +1,6 @@
 name: more_recipes
-main: MoreRecipes
-version: 0.1
+main: cn.navy_master.recipes.MoreRecipes
+version: 1.0.0
 api-version: 1.13
 author: navy_master
 commands:

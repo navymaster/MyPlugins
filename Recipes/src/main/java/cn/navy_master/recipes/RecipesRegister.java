@@ -1,10 +1,11 @@
+package cn.navy_master.recipes;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -145,7 +146,7 @@ public class RecipesRegister {
         sr.setIngredient('y',Material.BLAZE_ROD);
         sr.setIngredient('z',Material.OBSIDIAN);
         Bukkit.getServer().addRecipe(sr);
-        //ListenerForMoreRecipes.France_Bread=is;
+        //cn.navy_master.recipes.ListenerForMoreRecipes.France_Bread=is;
 
         is=new ItemStack(Material.BLAZE_POWDER);
         im=is.getItemMeta();
