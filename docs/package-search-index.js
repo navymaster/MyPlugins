@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"cn.navy_master.ehanceframework","h":"","u":""},{"l":"cn.navy_master.recipes","h":"","u":""},{"l":"cn.navy_master.WizardStaff","h":"","u":""},{"l":"org.example","h":"","u":""},{"l":"所有程序包","h":"","u":"allpackages-index.html"}]
