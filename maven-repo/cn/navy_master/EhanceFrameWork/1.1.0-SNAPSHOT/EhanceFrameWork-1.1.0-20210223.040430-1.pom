@@ -34,32 +34,7 @@
         <repository>
             <id>local-repo-release</id>
             <name>GitHub Release</name>
-            <url>file://${project.basedir}/../docs</url>
+            <url>file://${project.basedir}/../maven-repo</url>
         </repository>
     </distributionManagement>
-    <!--distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/navymaster/MyPlugins</url>
-        </repository>
-    </distributionManagement-->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>
