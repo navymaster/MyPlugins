@@ -1,6 +1,6 @@
 package cn.navy_master.WizardStaff;
 
-import cn.navy_master.ehanceframework.MagicManager;
+import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

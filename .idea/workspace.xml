@@ -182,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614050063715</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update repo">
+      <created>1614053157067</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1614053157067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -207,7 +214,8 @@
     <MESSAGE value="solve warnings" />
     <MESSAGE value="normal update" />
     <MESSAGE value="add docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docs" />
+    <MESSAGE value="update repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="update repo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

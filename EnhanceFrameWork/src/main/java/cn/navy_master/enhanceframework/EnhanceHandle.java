@@ -1,4 +1,4 @@
-package cn.navy_master.ehanceframework;
+package cn.navy_master.enhanceframework;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

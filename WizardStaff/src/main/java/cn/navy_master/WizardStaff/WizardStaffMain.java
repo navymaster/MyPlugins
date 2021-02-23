@@ -1,7 +1,7 @@
 package cn.navy_master.WizardStaff;
 
-import cn.navy_master.ehanceframework.MagicExecutor;
-import cn.navy_master.ehanceframework.MagicManager;
+import cn.navy_master.enhanceframework.MagicExecutor;
+import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;

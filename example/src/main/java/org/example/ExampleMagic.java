@@ -1,7 +1,7 @@
 package org.example;
 
-import cn.navy_master.ehanceframework.MagicExecutor;
-import cn.navy_master.ehanceframework.MagicManager;
+import cn.navy_master.enhanceframework.MagicExecutor;
+import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.event.EventHandler;
