@@ -34,7 +34,7 @@ my plugins for minecraft spigot server
         <dependency>
             <groupId>cn.navy_master</groupId>
             <artifactId>EnhanceFrameWork</artifactId>
-            <version>1.1.0-SNAPSHOT</version>
+            <version><!--在maven-repo/cn/navy_master/EnhanceFrameWork中找到你想要的版本号填在这里--></version>
         </dependency>
     </dependencies>
  ```
