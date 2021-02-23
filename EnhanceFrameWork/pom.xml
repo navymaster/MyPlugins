@@ -6,7 +6,7 @@
 
     <groupId>cn.navy_master</groupId>
     <artifactId>EhanceFrameWork</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -29,4 +29,12 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/navymaster/MyPlugins</url>
+        </repository>
+    </distributionManagement>
 </project>

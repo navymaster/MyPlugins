@@ -10,21 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7318ba-7466-4588-96e2-55293d6646f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/MagicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/UnsupportedEventException.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/ehanceframework/UnsupportedEventException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/Assemble.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/Assemble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/ListenerForMoreRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/ListenerForMoreRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/PlayerHandBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/PlayerHandBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/PlayerMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/PlayerMagic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WizardStaff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +55,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1nocXhhDzBLYZwJEiKwrBSpXkts" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -80,7 +74,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -169,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613986195858</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="solve warnings">
+      <created>1613993595404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613993595404</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +193,8 @@
     <MESSAGE value="normal update" />
     <MESSAGE value="make framework more FRAMEWORK" />
     <MESSAGE value="add support for any kind of Event with getPlayer()&#10;add support for six EquipmentSlots&#10;change example to show these change" />
-    <option name="LAST_COMMIT_MESSAGE" value="add support for any kind of Event with getPlayer()&#10;add support for six EquipmentSlots&#10;change example to show these change" />
+    <MESSAGE value="solve warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve warnings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
