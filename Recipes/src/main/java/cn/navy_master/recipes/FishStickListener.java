@@ -14,7 +14,6 @@ public class FishStickListener implements Listener {
     @EventHandler
     public void handle(EntityDeathEvent e){
         try {
-            //Bukkit.getLogger().info("handle");
             if(e.getEntity().getKiller().getInventory().getItem(EquipmentSlot.HAND).
                     getItemMeta().getLore().equals(fish_stick.getItemMeta().getLore())&&
                     e.getEntity().getKiller().getInventory().getItem(EquipmentSlot.HAND).
@@ -46,7 +45,7 @@ public class FishStickListener implements Listener {
                         break;
                 }
             }
-        }catch (NullPointerException n){n.printStackTrace();
+        }catch (NullPointerException ignored){
         }
     }
 }

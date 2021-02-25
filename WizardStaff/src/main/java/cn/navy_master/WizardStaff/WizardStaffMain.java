@@ -117,7 +117,7 @@ public class WizardStaffMain extends JavaPlugin {
         }
         if(install) {
             //火焰箭
-            MagicExecutor FLAME_ARROW = new MagicExecutor(PlayerInteractEvent.class,0, true) {
+            MagicExecutor FLAME_ARROW = new MagicExecutor(PlayerInteractEvent.class,1, true) {
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -355,7 +355,7 @@ public class WizardStaffMain extends JavaPlugin {
         }
         if(install) {
             //传送术
-            MagicExecutor TELEPORT = new MagicExecutor(PlayerInteractEvent.class,0, true) {
+            MagicExecutor TELEPORT = new MagicExecutor(PlayerInteractEvent.class,1, true) {
                 @Override
                 @SuppressWarnings("deprecation")
                 public boolean runMagic(LivingEntity Caster) {

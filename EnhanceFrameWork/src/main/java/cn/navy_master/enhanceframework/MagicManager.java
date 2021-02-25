@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * 法术管理类<br>
  * 整个程序包的入口
  * @author navy_master
- * @version 1.0.0
+ * @version 1.0.1
  */
 public class MagicManager {
     protected Plugin plugin_INSTANCE;
@@ -64,10 +64,10 @@ public class MagicManager {
             if (!UnsupportedEventException.have_getPlayer(e.getClass()))
                 throw new UnsupportedEventException("The new Magic Executor has unsupported trigger event.");
             if (!events.contains(e.getClass())) {
-                methods.add(check_method(e, l));
+                Method m=check_method(e,l);
+                methods.add(m);
                 events.add(e.getClass());
                 try_to_run(e);
-
             } else {
                 Method m = check_method(e, l);
                 if (methods.contains(m)) {
@@ -90,7 +90,9 @@ public class MagicManager {
         for(Method m:method){
             if(m.isAnnotationPresent(EventHandler.class)&&m.getParameterCount()==1){
                 Class<?>[] p= m.getParameterTypes();
-                if(e.getClass().isAssignableFrom(p.getClass())){
+                //Bukkit.getLogger().info("方法"+m.getName()+"是触发器");
+                if(p[0].isInstance(e)){
+                    //Bukkit.getLogger().info("方法"+m.getName()+"是触发此次校验的方法");
                     return m;
                 }
             }

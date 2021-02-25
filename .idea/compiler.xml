@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Recipes" />
         <module name="EnhanceFrameWork" />
+        <module name="Boss" />
         <module name="WizardStaff" />
         <module name="example" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Boss" target="11" />
       <module name="EnhanceFrameWork" target="11" />
       <module name="example" target="11" />
       <module name="MoreRecipes" target="8" />

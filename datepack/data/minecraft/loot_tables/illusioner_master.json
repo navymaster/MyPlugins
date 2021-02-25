@@ -1,0 +1,90 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "rolls":1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{display:{\"Name\":'{\"text\":\"幸运药水\"}'},Potion:\"minecraft:luck\"}"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {        
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.5,
+              "looting_multiplier": 0.005
+          }
+        ]
+      },
+      {
+        "rolls":1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:splash_potion",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{display:{\"Name\":'{\"text\":\"喷溅型衰变药水\"}'},CustomPotionEffects:[{Id:20b,Duration:200,Amplifier:0b}]}"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {        
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.5,
+              "looting_multiplier": 0.005
+          }
+        ]
+  
+      },
+      {
+        "rolls":1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:totem_of_undying"
+          }
+        ],
+        "conditions": [
+          {        
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.5,
+              "looting_multiplier": 0.005
+          }
+        ]
+  
+      },
+      {
+        "rolls":1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:potion",
+            "functions": [
+              {
+                "function": "set_nbt",
+                "tag": "{display:{\"Name\":'{\"text\":\"伤害吸收药水\"}'},CustomPotionEffects:[{Id:22b,Duration:6000,Amplifier:0b}]}"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {        
+              "condition": "minecraft:random_chance_with_looting",
+              "chance": 0.5,
+              "looting_multiplier": 0.005
+          }
+        ]
+  
+      }
+    ]
+  }

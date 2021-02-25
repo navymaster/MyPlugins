@@ -66,8 +66,7 @@ public class Wabbajack implements Listener {
                         entity.remove();
                     }
                 }
-            }catch(NullPointerException n){
-                n.printStackTrace();
+            }catch(NullPointerException ignored){
             }
         }
     }

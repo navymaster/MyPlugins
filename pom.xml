@@ -13,7 +13,16 @@
         <module>EnhanceFrameWork</module>
         <module>example</module>
         <module>WizardStaff</module>
+        <module>Boss</module>
     </modules>
+
+    <repositories>
+        <!-- This adds the Spigot Maven repository to the build -->
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
     <build>
         <!-- To define the plugin version in your parent POM -->
         <pluginManagement>

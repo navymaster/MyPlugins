@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Boss/Boss.iml" filepath="$PROJECT_DIR$/Boss/Boss.iml" />
       <module fileurl="file://$PROJECT_DIR$/EnhanceFrameWork/EnhanceFrameWork.iml" filepath="$PROJECT_DIR$/EnhanceFrameWork/EnhanceFrameWork.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyPlugins.iml" filepath="$PROJECT_DIR$/MyPlugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/Recipes/Recipes.iml" filepath="$PROJECT_DIR$/Recipes/Recipes.iml" />

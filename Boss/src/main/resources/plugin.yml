@@ -1,0 +1,10 @@
+main: cn.navy_master.bossbattle.BossBattleMain
+name: boss_battle
+version: 0.1.0-SNAPSHOT
+api-version: 1.13
+author: navy_master
+depend: [wizard_staff]
+commands:
+  callboss:
+    description: summon a boss which not in vanilla
+    usage: /<command> <bossname>
