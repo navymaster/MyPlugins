@@ -1,6 +1,9 @@
 package cn.navy_master.recipes;
 
 import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -17,6 +20,13 @@ public class MoreRecipes extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new ListenerForMoreRecipes(),this);
         Bukkit.getPluginCommand("sethome").setExecutor(new HomeSetter());
         Bukkit.getPluginCommand("home").setExecutor(new HomeBack());
+        Bukkit.getPluginCommand("viewhome").setExecutor(new CommandExecutor() {
+            @Override
+            public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+                //for(String s:conf.getList())
+                return false;
+            }
+        });
         Assemble a=new Assemble();
         Bukkit.getPluginCommand("assemble").setExecutor(a);
         Bukkit.getPluginCommand("response").setExecutor(a);

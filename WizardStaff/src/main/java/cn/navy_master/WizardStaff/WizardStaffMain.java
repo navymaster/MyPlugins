@@ -7,6 +7,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 import org.bukkit.event.player.*;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -412,10 +413,15 @@ public class WizardStaffMain extends JavaPlugin {
         }
         if(install) {
             //治愈之风
-            MagicExecutor HEAL_WIND = new MagicExecutor(PlayerMoveEvent.class,100, true) {
+            MagicExecutor HEAL_WIND = new MagicExecutor(PlayerMoveEvent.class,200, true) {
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     Caster.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION,40,5,false,false));
+                    return true;
+                }
+
+                @Override
+                public boolean checkEquipmentSlot(EquipmentSlot es) {
                     return true;
                 }
             };
@@ -437,9 +443,13 @@ public class WizardStaffMain extends JavaPlugin {
                     }
                     return true;
                 }
+
+                @Override
+                public boolean checkEquipmentSlot(EquipmentSlot es) {
+                    return true;
+                }
             };
             mm.register_magic("CALL_BACK", CALL_BACK);
         }
-
     }
 }

@@ -257,9 +257,10 @@ public class RecipesRegister {
         im.addEnchant(Enchantment.DAMAGE_ALL,1,true);
         is.setItemMeta(im);
         sr=new ShapedRecipe(NamespacedKey.minecraft("boss_call"),is);
-        sr.shape(" x ","xyx"," y ");
-        sr.setIngredient('x',Material.WATER_BUCKET);
+        sr.shape("zzz","xyx","xxx");
+        sr.setIngredient('x',Material.PAPER);
         sr.setIngredient('y',Material.DIAMOND);
+        sr.setIngredient('z',Material.LAPIS_LAZULI);
         Bukkit.getServer().addRecipe(sr);
     }
 }

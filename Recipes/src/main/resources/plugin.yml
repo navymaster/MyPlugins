@@ -6,13 +6,16 @@ author: navy_master
 commands:
   sethome:
     description: set the home of you
-    usage: /<command>
+    usage: /<command> <owner>
   home:
     description: back to the home of you
-    usage: /<command>
+    usage: /<command> <target>
   assemble:
     description: call everyone tp to you
     usage: /<command>
   response:
     description: tp to the assemble place
+    usage: /<command>
+  viewhome:
+    description: show all home
     usage: /<command>

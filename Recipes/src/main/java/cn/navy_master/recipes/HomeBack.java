@@ -11,9 +11,20 @@ public class HomeBack implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(MoreRecipes.conf.contains(commandSender.getName())&&Player.class.isAssignableFrom(commandSender.getClass()))
         {
-            Location loc=(Location) MoreRecipes.conf.get(commandSender.getName());
-            ((Player) commandSender).teleport(loc);
-            return true;
+            if(strings.length==0)
+            {
+                Location loc=(Location) MoreRecipes.conf.get(commandSender.getName());
+                ((Player) commandSender).teleport(loc);
+                return true;
+            }else{
+                try {
+                    Location loc = (Location) MoreRecipes.conf.get(strings[0]);
+                    ((Player) commandSender).teleport(loc);
+                }catch (Exception e){
+                    commandSender.sendMessage("错误的指向");
+                }
+                return true;
+            }
         }else {
             commandSender.sendMessage("你还没有设置home,或你不是玩家");
             return false;

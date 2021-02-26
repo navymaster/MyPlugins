@@ -10,29 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7318ba-7466-4588-96e2-55293d6646f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/server1_16_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boss/Boss.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boss/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossBattleMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossIllusioner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boss/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_5_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/FishStickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/FishStickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/Wabbajack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/Wabbajack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/WizardStaff.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/WizardStaff.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipes/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/example/example.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="E:/mc_server/server1.16.5.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datepack" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -95,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\22524\IdeaProjects\MyPlugins\datepack" />
       <recent name="C:\Users\22524\IdeaProjects\MyPlugins\Boss\src\main\resources" />
       <recent name="C:\Users\22524\IdeaProjects\MyPlugins\WizardStaff\src\main\resources" />
       <recent name="C:\Users\22524\IdeaProjects\MyPlugins\WizardStaff\src\main\java\cn\navy_master\WizardStaff" />
       <recent name="C:\Users\22524\IdeaProjects\MyPlugins" />
-      <recent name="C:\Users\22524\IdeaProjects\MyPlugins\QQsocket\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\22524\IdeaProjects\MyPlugins\EnhanceFrameWork\src\main\java" />
@@ -227,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614057325146</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add more playable things,and fix an important bug">
+      <created>1614237971011</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1614237971011</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +244,8 @@
     <MESSAGE value="normal update" />
     <MESSAGE value="add docs" />
     <MESSAGE value="update repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="update repo" />
+    <MESSAGE value="add more playable things,and fix an important bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more playable things,and fix an important bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
