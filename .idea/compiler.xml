@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Economics" />
         <module name="Recipes" />
         <module name="EnhanceFrameWork" />
         <module name="Boss" />
@@ -15,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Boss" target="11" />
+      <module name="Economics" target="11" />
       <module name="EnhanceFrameWork" target="11" />
       <module name="example" target="11" />
       <module name="MoreRecipes" target="8" />

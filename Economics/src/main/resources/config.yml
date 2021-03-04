@@ -1,0 +1,24 @@
+TransactionList:
+  - ==: cn.navy_master.economics.Transaction
+    owner: System
+    inf: true
+    price: 20
+    num: 1
+    things:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: EMERALD
+RecoveryList:
+  - ==: cn.navy_master.economics.Recovery
+    price: 20
+    things:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: EMERALD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore:
+          - '{"extra":[{"text":"回收单价：20"}],"text":""}'
+Bank:
+  System: 0

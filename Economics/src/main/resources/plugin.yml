@@ -1,0 +1,12 @@
+main: cn.navy_master.economics.Economics
+name: economics
+version: 0.1.0
+api-version: 1.13
+author: navy_master
+commands:
+  trade:
+    description: show trading info
+    usage: <command>
+  recovery:
+    description: create a recovery of things in your hand
+    usage: <command> <price>

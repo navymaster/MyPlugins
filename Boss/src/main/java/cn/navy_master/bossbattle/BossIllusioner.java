@@ -14,13 +14,13 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
 /**
  * 对幻术大师的包装，给予其更多技能，更多血量
  */
+@SuppressWarnings("ALL")
 public class BossIllusioner{
     private static List<BossIllusioner> instances=new ArrayList<>();
     private final Illusioner value;

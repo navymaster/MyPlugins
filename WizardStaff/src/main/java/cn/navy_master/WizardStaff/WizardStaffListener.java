@@ -9,6 +9,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.enchantment.EnchantItemEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -38,7 +39,6 @@ public class WizardStaffListener implements Listener {
     @EventHandler
     @SuppressWarnings("unchecked")
     public void handle_enter(PlayerJoinEvent e){
-        if(!WizardStaffMain.player_magics.containsKey(e.getPlayer())) {
             if(debug_mode){
                 for(String s: MagicManager.MagicList.keySet()){
                     ItemStack is=new ItemStack(Material.STICK);
@@ -49,10 +49,11 @@ public class WizardStaffListener implements Listener {
                     is.setItemMeta(im);
                     e.getPlayer().getInventory().addItem(is);
                 }
-                ItemStack is=new ItemStack(Material.GOLDEN_HELMET);
+                ItemStack is=new ItemStack(Material.NETHERITE_PICKAXE);
                 ItemMeta im=is.getItemMeta();
+                im.setDisplayName("裂岩镐");
                 List<String> l=new ArrayList<>();
-                l.add("TEST");
+                l.add("BREAK");
                 im.setLore(l);
                 is.setItemMeta(im);
                 e.getPlayer().getInventory().addItem(is);
@@ -68,7 +69,6 @@ public class WizardStaffListener implements Listener {
                 e.getPlayer().sendMessage(ChatColor.YELLOW +"欢迎来到守夜人服务器，你还没有在本次更新后登陆本服务器，这意味着玩家手册已经更新，建议你使用/phb获取新的玩家手册");
             }
             WizardStaffMain.FC.set("PlayerList",playerList);
-        }
     }
 
     /**
@@ -242,6 +242,9 @@ public class WizardStaffListener implements Listener {
     public void default_magic_handle(PlayerMoveEvent e){
         MagicManager.handle_all(e,this);
     }
-
+    @EventHandler
+    public void default_magic_handle(BlockBreakEvent e){
+        MagicManager.handle_all(e,this);
+    }
 
 }

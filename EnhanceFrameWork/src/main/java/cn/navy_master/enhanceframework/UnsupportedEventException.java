@@ -22,15 +22,25 @@ public class UnsupportedEventException extends Exception {
      * @return 是否含有相应方法
      */
     public static boolean have_getPlayer(Class<? extends Event> c) throws UnsupportedEventException {
-        get_getPlayer(c);
+        get_caster_method(c);
         return true;
     }
+
+    /**
+     * 获取getPlayer()函数
+     * @param c 要获取函数的类
+     * @return getPlayer函数
+     * @throws UnsupportedEventException 不支持触发事件
+     */
     @SuppressWarnings("unchecked")
-    protected static Method get_getPlayer(Class<? extends Event> c) throws UnsupportedEventException {
+    protected static Method get_caster_method(Class<? extends Event> c) throws UnsupportedEventException {
         while(c!=Event.class) {
             Method[] methods = c.getDeclaredMethods();
             for (Method m : methods) {
                 if (m.getName().equals("getPlayer")) {
+                    return m;
+                }
+                if(m.getName().equals("getEntity")){
                     return m;
                 }
             }

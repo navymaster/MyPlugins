@@ -1,33 +1,28 @@
 package cn.navy_master.bossbattle;
 
+import cn.navy_master.enhanceframework.ExecutorMethod;
 import cn.navy_master.enhanceframework.MagicExecutor;
 import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.entity.EntitySpawnEvent;
-import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.world.LootGenerateEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.PotionMeta;
-import org.bukkit.loot.LootTable;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
-import java.net.http.WebSocket;
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * boss战插件主类
@@ -50,6 +45,7 @@ public class BossBattleMain extends JavaPlugin implements Listener, CommandExecu
              * @param Caster 施法者
              * @return 施法成功与否
              */
+            @ExecutorMethod
             @Override
             public boolean runMagic(LivingEntity Caster) {
                 BossIllusioner.createBossIllusioner(Caster.getLocation(),BossBattleMain.INSTANCE);
@@ -59,6 +55,7 @@ public class BossBattleMain extends JavaPlugin implements Listener, CommandExecu
             }
         };
         mm.register_magic("CALLBOSS", CALLBOSS);
+        reg_boss_summon();
     }
 
     @Override
@@ -95,5 +92,26 @@ public class BossBattleMain extends JavaPlugin implements Listener, CommandExecu
             }
         }
         return true;
+    }
+    public void reg_boss_summon(){
+        ItemStack is;
+        ItemMeta im;
+        ArrayList<String> l;
+        ShapedRecipe sr;
+        is=new ItemStack(Material.BOOK);
+        im=is.getItemMeta();
+        l=new ArrayList<>();
+        l.add(ChatColor.WHITE+"立召唤幻术大师");
+        l.add("CALLBOSS");
+        im.setDisplayName(ChatColor.GOLD+"呼喝邀令");
+        im.setLore(l);
+        im.addEnchant(Enchantment.DAMAGE_ALL,1,true);
+        is.setItemMeta(im);
+        sr=new ShapedRecipe(NamespacedKey.minecraft("boss_call"),is);
+        sr.shape("zzz","xyx","xxx");
+        sr.setIngredient('x',Material.PAPER);
+        sr.setIngredient('y',Material.DIAMOND);
+        sr.setIngredient('z',Material.LAPIS_LAZULI);
+        Bukkit.getServer().addRecipe(sr);
     }
 }

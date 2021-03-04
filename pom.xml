@@ -14,6 +14,7 @@
         <module>example</module>
         <module>WizardStaff</module>
         <module>Boss</module>
+        <module>Economics</module>
     </modules>
 
     <repositories>

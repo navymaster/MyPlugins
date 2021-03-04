@@ -9,16 +9,16 @@ import org.bukkit.entity.Player;
 public class HomeBack implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if(MoreRecipes.conf.contains(commandSender.getName())&&Player.class.isAssignableFrom(commandSender.getClass()))
+        if(MoreRecipes.homes.contains(commandSender.getName())&&Player.class.isAssignableFrom(commandSender.getClass()))
         {
             if(strings.length==0)
             {
-                Location loc=(Location) MoreRecipes.conf.get(commandSender.getName());
+                Location loc=(Location) MoreRecipes.homes.get(commandSender.getName());
                 ((Player) commandSender).teleport(loc);
                 return true;
             }else{
                 try {
-                    Location loc = (Location) MoreRecipes.conf.get(strings[0]);
+                    Location loc = (Location) MoreRecipes.homes.get(strings[0]);
                     ((Player) commandSender).teleport(loc);
                 }catch (Exception e){
                     commandSender.sendMessage("错误的指向");

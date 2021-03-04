@@ -1,6 +1,7 @@
 package cn.navy_master.enhanceframework;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
@@ -47,7 +48,6 @@ public class MagicManager {
      * @param m 法术的执行器
      */
     public void register_magic(String name,MagicExecutor m){
-
         if(m.isEnhanceable())enhance_registered++;
         m.setBelong_to(this);
         MagicList.put(name,m);
@@ -61,17 +61,15 @@ public class MagicManager {
      */
     public static void handle_all(Event e, Listener l) {
         try {
-            if (!UnsupportedEventException.have_getPlayer(e.getClass()))
-                throw new UnsupportedEventException("The new Magic Executor has unsupported trigger event.");
+            Method met=UnsupportedEventException.get_caster_method(e.getClass());
+            Method m=check_method(e,l);
             if (!events.contains(e.getClass())) {
-                Method m=check_method(e,l);
                 methods.add(m);
                 events.add(e.getClass());
-                try_to_run(e);
+                try_to_run(e,met);
             } else {
-                Method m = check_method(e, l);
                 if (methods.contains(m)) {
-                    try_to_run(e);
+                    try_to_run(e,met);
                 }
             }
         } catch (UnsupportedEventException | InvocationTargetException | IllegalAccessException unsupportedEventException) {
@@ -103,42 +101,37 @@ public class MagicManager {
      * 校验事件触发者的装备是否符合条件，符合条件则调出法术执行器
      * @param e 事件
      */
-    private static void try_to_run(Event e) throws InvocationTargetException, IllegalAccessException {
-        Method met= null;
-        try {
-            met = UnsupportedEventException.get_getPlayer(e.getClass());
-        } catch (UnsupportedEventException unsupportedEventException) {
-            unsupportedEventException.printStackTrace();
-        }
-        for(EquipmentSlot key:EquipmentSlot.values()) {
-            ItemStack is= null;
-            if (met != null) {
-                is = ((Player)met.invoke(e)).getInventory().getItem(key);
-            }
-            if (Objects.isNull(is)||(!is.hasItemMeta()) || (!is.getItemMeta().hasLore())) {
-                continue;
-            }
-            ItemMeta im;
-            List<String> Lore;
-            im = is.getItemMeta();
-            Lore = im.getLore();
-            for (int i = 0; i < Lore.size(); i++) {
-                String s = Lore.get(i);
-                Matcher m = p.matcher(s);
-                if (m.find()) {
-                    if (MagicList.containsKey(m.group(1))) {
-                        MagicExecutor me = MagicList.get(m.group(1));
-                        if (me.can_trigger_by(e.getClass())&&me.checkEquipmentSlot(key)) {
-                            if (m.group(2) == null) {
-                                MagicManager.MagicList.get(m.group(1)).play_magic(((Player)met.invoke(e)));
-                            } else {
-                                if (!m.group(3).equals("0")) {
-                                    boolean suc = MagicList.get(m.group(1)).play_magic_without_cool_time(((Player)met.invoke(e)));
-                                    if (!suc) continue;
-                                    s = m.group(1) + "<" + (Integer.parseInt(m.group(3)) - 1) + "/" + m.group(4) + ">";
-                                    Lore.set(i, s);
-                                    im.setLore(Lore);
-                                    ((Player)met.invoke(e)).getInventory().getItem(EquipmentSlot.HAND).setItemMeta(im);
+    private static void try_to_run(Event e,Method met) throws InvocationTargetException, IllegalAccessException {
+        if(met.invoke(e) instanceof Player) {
+            Player caster=(Player)met.invoke(e);
+            for (EquipmentSlot key : EquipmentSlot.values()) {
+                ItemStack is;
+                is = caster.getInventory().getItem(key);
+                if (Objects.isNull(is) || (!is.hasItemMeta()) || (!is.getItemMeta().hasLore())) {
+                    continue;
+                }
+                ItemMeta im;
+                List<String> Lore;
+                im = is.getItemMeta();
+                Lore = im.getLore();
+                for (int i = 0; i < Lore.size(); i++) {
+                    String s = Lore.get(i);
+                    Matcher m = p.matcher(s);
+                    if (m.find()) {//正则匹配校验触发词条
+                        if (MagicList.containsKey(m.group(1))) {
+                            MagicExecutor me = MagicList.get(m.group(1));
+                            if (me.can_trigger_by(e.getClass()) && me.checkEquipmentSlot(key)) {
+                                if (m.group(2) == null) {
+                                    MagicManager.MagicList.get(m.group(1)).play_magic(e, met);
+                                } else {
+                                    if (!m.group(3).equals("0")) {
+                                        boolean suc = MagicList.get(m.group(1)).play_magic_without_cool_time(e, met);
+                                        if (!suc) continue;
+                                        s = m.group(1) + "<" + (Integer.parseInt(m.group(3)) - 1) + "/" + m.group(4) + ">";
+                                        Lore.set(i, s);
+                                        im.setLore(Lore);
+                                        caster.getInventory().getItem(EquipmentSlot.HAND).setItemMeta(im);
+                                    }
                                 }
                             }
                         }
@@ -146,5 +139,6 @@ public class MagicManager {
                 }
             }
         }
+        //TODO:让附魔支持非玩家生物
     }
 }

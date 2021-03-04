@@ -1,11 +1,14 @@
 package cn.navy_master.enhanceframework;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.*;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.*;
 
 /**
@@ -98,11 +101,17 @@ public abstract class MagicExecutor {
         return false;
     }
     /**
-     * 法术执行函数，如果新建法术，必须重载此函数
+     * 法术执行函数，如果新建法术，必须重载具有此名称函数之一，如果两个都被重载，优先执行此函数
      * @param Caster 施法者
      * @return 施法成功与否
      */
-    public abstract boolean runMagic(LivingEntity Caster);
+    public boolean runMagic(LivingEntity Caster){return false;}
+    /**
+     * 法术执行函数，如果新建法术，必须重载具有此名称函数之一
+     * @param e 触发的事件
+     * @return 施法成功与否
+     */
+    public boolean runMagic(Event e){return false;}
     /**
      * 装备校验方法，如果希望在非主手的位置调用法术效果，请重载本方法
      * @param es 触发时，施法物品所在的装备槽
@@ -113,14 +122,16 @@ public abstract class MagicExecutor {
     }
     /**
      * 包装过的施法执行函数，判断完冷却时间后，会执行runMagic函数
-     * @param Caster 施法者
+     * @param e 触发事件
+     * @param met getPlayer函数
      */
-    protected void play_magic(LivingEntity Caster) {
-        if (Player.class.isAssignableFrom(Caster.getClass())) {
+    protected void play_magic(Event e,Method met) throws InvocationTargetException, IllegalAccessException {
+        if (Player.class.isAssignableFrom(((LivingEntity)met.invoke(e)).getClass())) {
+            Player Caster=((Player)met.invoke(e));
             PlayerMagic PML = PlayerMagic.player_magics.get(Caster);
             if (PML.getCool_time() == 0) {
                 boolean suc;
-                suc = runMagic(Caster);
+                suc =play_magic_without_cool_time(e,met);
                 if (suc) {
                     PML.setCool_time(cold_time);
                     new BukkitRunnable() {
@@ -136,15 +147,31 @@ public abstract class MagicExecutor {
                 }
             }
         } else {
-            runMagic(Caster);
+            play_magic_without_cool_time(e,met);
         }
     }
     /**
      * 无冷却调用
-     * @param Caster 施法者
+     * @param e 触发事件
+     * @param met getPlayer函数
      * @return 施法成功与否
      */
-    protected boolean play_magic_without_cool_time(LivingEntity Caster){
-        return runMagic(Caster);
+    protected boolean play_magic_without_cool_time(Event e,Method met) throws InvocationTargetException, IllegalAccessException {
+        for(Method m:this.getClass().getDeclaredMethods()){
+            if(m.isAnnotationPresent(ExecutorMethod.class)){
+                if(m.getParameterTypes()[0].equals(LivingEntity.class)){
+                    //Bukkit.getLogger().info("检测到实体执行函数");
+                    m.setAccessible(true);
+                    return (boolean)m.invoke(this,met.invoke(e));
+                }
+                if(m.getParameterTypes()[0].isInstance(e)){
+                    //Bukkit.getLogger().info("检测到事件执行函数");
+                    m.setAccessible(true);
+                    return (boolean)m.invoke(this,e);
+                }
+            }
+        }
+        //Bukkit.getLogger().info("未检测到执行函数");
+        return  false;
     }
 }

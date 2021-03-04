@@ -10,12 +10,12 @@ public class HomeSetter implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(Player.class.isAssignableFrom(commandSender.getClass())) {
             if(strings.length==0) {
-                MoreRecipes.conf.set(commandSender.getName(), ((Player) commandSender).getLocation());
+                MoreRecipes.homes.set(commandSender.getName(), ((Player) commandSender).getLocation());
                 commandSender.sendMessage("已成功设置你的家");
             }
             else{
                 if(commandSender.isOp()||strings[0].equals(commandSender.getName())) {
-                    MoreRecipes.conf.set(strings[0], ((Player) commandSender).getLocation());
+                    MoreRecipes.homes.set(strings[0], ((Player) commandSender).getLocation());
                     commandSender.sendMessage("已成功设置你的家");
                 }
                 else

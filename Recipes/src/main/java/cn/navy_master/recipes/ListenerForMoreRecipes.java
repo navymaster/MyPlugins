@@ -51,17 +51,7 @@ public class ListenerForMoreRecipes implements Listener {
                         ((LivingEntity) e.getDamager()).getEquipment().setItemInMainHand(is);
                     }
                 }
-            } catch (NullPointerException n) {n.printStackTrace();}
+            } catch (NullPointerException ignored) {}
         }
-    }
-    public double P_rand(double Lambda){ // 泊松分布
-        double x=0,b=1,c=Math.exp(-Lambda),u;
-        do {
-            u=Math.random();
-            b *=u;
-            if(b>=c)
-                x++;
-        }while(b>=c);
-        return x;
     }
 }

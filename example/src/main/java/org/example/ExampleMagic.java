@@ -1,16 +1,15 @@
 package org.example;
 
+import cn.navy_master.enhanceframework.ExecutorMethod;
 import cn.navy_master.enhanceframework.MagicExecutor;
 import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 /**
  * 这是一个EnhanceFrameWork的使用例子
@@ -20,25 +19,24 @@ import org.bukkit.potion.PotionEffectType;
  */
 public class ExampleMagic extends JavaPlugin implements Listener {
     /**
-     * 插件初始化函数，这里注册了一个名为“TEST”的附魔，在玩家打破方块时，加经验
+     * 插件初始化函数，这里注册了一个名为“TEST”的附魔，在玩家打破方块时发送消息
      */
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this,this);
         MagicManager mm=new MagicManager(this);
-
         MagicExecutor TEST = new MagicExecutor(BlockBreakEvent.class,20, true) {
             /**
-             * 必须重载执行器的runMagic函数
-             * @param Caster 施法者
-             * @return 施法成功与否
+             * 视需求重载两个runMagic函数中的一个<br>
+             * 但注意，如果重载的是下面这个，并且有多个触发事件类型，你需要手动判断具体是哪个事件
+             * @param e 触发的事件
+             * @return 执行成功与否
              */
-            @Override
-            public boolean runMagic(LivingEntity Caster) {
-                Caster.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION,100,1,false,false));
+            @ExecutorMethod
+            public boolean runMagic(BlockBreakEvent e) {
+                e.getPlayer().sendMessage("这是一个测试用例，如果成了，那么就成功了");
                 return true;
             }
-
             /**
              * 装备槽校验方法，可选重载，默认只允许主手
              * @param es 触发时，施法物品所在的装备槽

@@ -20,7 +20,7 @@
         <dependency>
             <groupId>cn.navy_master</groupId>
             <artifactId>EnhanceFrameWork</artifactId>
-            <version>1.1.1-SNAPSHOT</version>
+            <version>1.2.1-RELEASE</version>
         </dependency>
 
         <dependency>

@@ -1,11 +1,13 @@
 package cn.navy_master.WizardStaff;
 
+import cn.navy_master.enhanceframework.ExecutorMethod;
 import cn.navy_master.enhanceframework.MagicExecutor;
 import cn.navy_master.enhanceframework.MagicManager;
 import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
@@ -29,7 +31,6 @@ import java.util.*;
  * */
 public class WizardStaffMain extends JavaPlugin {
     public static WizardStaffMain only;
-    public static HashMap<Player, PlayerMagic> player_magics =new HashMap<>();
     public static FileConfiguration FC;
     public static boolean debug_mode;
     /**
@@ -96,6 +97,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //火球
             MagicExecutor FIRE_BALL = new MagicExecutor(PlayerInteractEvent.class,20, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -119,6 +121,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //火焰箭
             MagicExecutor FLAME_ARROW = new MagicExecutor(PlayerInteractEvent.class,1, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -143,6 +146,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //雷鸣波
             MagicExecutor THUNDER_WAVE = new MagicExecutor(PlayerInteractEvent.class,60, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     Location loc = Caster.getLocation();
@@ -171,6 +175,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //粉碎音波
             MagicExecutor SHATTER = new MagicExecutor(PlayerInteractEvent.class,100, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -204,6 +209,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //魔法飞弹
             MagicExecutor MAGIC_MISSILE = new MagicExecutor(PlayerInteractEvent.class,60, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -272,6 +278,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //冰铠
             MagicExecutor FROST_ARMOR = new MagicExecutor(PlayerInteractEvent.class,1200, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     if(Caster.getAbsorptionAmount()==0)return false;
@@ -294,6 +301,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //召雷术
             MagicExecutor THUNDER_CALLING = new MagicExecutor(PlayerInteractEvent.class,100, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     try {
@@ -317,6 +325,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //怪物定身术
             MagicExecutor HOLD_MONSTER = new MagicExecutor(PlayerInteractEvent.class,120, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     World w = Caster.getWorld();
@@ -358,6 +367,7 @@ public class WizardStaffMain extends JavaPlugin {
             //传送术
             MagicExecutor TELEPORT = new MagicExecutor(PlayerInteractEvent.class,1, true) {
                 @Override
+                @ExecutorMethod
                 @SuppressWarnings("deprecation")
                 public boolean runMagic(LivingEntity Caster) {
                     if (Player.class.isAssignableFrom(Caster.getClass())) {
@@ -414,9 +424,10 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //治愈之风
             MagicExecutor HEAL_WIND = new MagicExecutor(PlayerMoveEvent.class,200, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
-                    Caster.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION,40,5,false,false));
+                    Caster.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION,20,3,false,false));
                     return true;
                 }
 
@@ -436,6 +447,7 @@ public class WizardStaffMain extends JavaPlugin {
         if(install) {
             //召还
             MagicExecutor CALL_BACK = new MagicExecutor(PlayerItemDamageEvent.class,20, true) {
+                @ExecutorMethod
                 @Override
                 public boolean runMagic(LivingEntity Caster) {
                     if (Player.class.isAssignableFrom(Caster.getClass())) {
@@ -450,6 +462,39 @@ public class WizardStaffMain extends JavaPlugin {
                 }
             };
             mm.register_magic("CALL_BACK", CALL_BACK);
+        }
+        if(defaults_magic.containsKey("BREAK")) {
+            install=defaults_magic.get("BREAK");
+        }else{
+            install=true;
+            defaults_magic.put("BREAK",true);
+        }
+        if(install) {
+            //召还
+            MagicExecutor BREAK = new MagicExecutor(BlockBreakEvent.class,1, false) {
+                @ExecutorMethod
+                public boolean run(BlockBreakEvent e) {
+                    //Bukkit.getLogger().info("执行成功");
+                    Location l=e.getBlock().getLocation();
+                    for(int i=-1;i<2;i++)
+                    {
+                        for(int j=-1;j<2;j++)
+                        {
+                            for (int k=-1;k<2;k++)
+                            l.clone().add(i,j,k).getBlock().breakNaturally(e.getPlayer().getInventory().getItem(EquipmentSlot.HAND));
+                        }
+                    }
+                    return true;
+                }
+
+                @Override
+                public boolean checkEquipmentSlot(EquipmentSlot es) {
+                    if(es==EquipmentSlot.HAND)
+                        return true;
+                    else return es == EquipmentSlot.OFF_HAND;
+                }
+            };
+            mm.register_magic("BREAK", BREAK);
         }
     }
 }

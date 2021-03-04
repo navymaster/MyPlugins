@@ -246,21 +246,5 @@ public class RecipesRegister {
         sr.setIngredient('y',Material.IRON_INGOT);
         sr.setIngredient('k',Material.GLOWSTONE_DUST);
         Bukkit.getServer().addRecipe(sr);
-
-        is=new ItemStack(Material.BOOK);
-        im=is.getItemMeta();
-        l=new ArrayList<>();
-        l.add(ChatColor.WHITE+"立召唤幻术大师");
-        l.add("CALLBOSS");
-        im.setDisplayName(ChatColor.GOLD+"呼喝邀令");
-        im.setLore(l);
-        im.addEnchant(Enchantment.DAMAGE_ALL,1,true);
-        is.setItemMeta(im);
-        sr=new ShapedRecipe(NamespacedKey.minecraft("boss_call"),is);
-        sr.shape("zzz","xyx","xxx");
-        sr.setIngredient('x',Material.PAPER);
-        sr.setIngredient('y',Material.DIAMOND);
-        sr.setIngredient('z',Material.LAPIS_LAZULI);
-        Bukkit.getServer().addRecipe(sr);
     }
 }
