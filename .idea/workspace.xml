@@ -10,127 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7318ba-7466-4588-96e2-55293d6646f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Economics/Economics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/EconomicExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/EconomicListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Economics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Recovery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/resources/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Economics/src/main/resources/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/ExecutorMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_2_22_11_38_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_2_22_11_38__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_2_22_17_46_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_2_22_17_46__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boss/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Boss/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossBattleMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossBattleMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossIllusioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/Boss/src/main/java/cn/navy_master/bossbattle/BossIllusioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/MagicManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/UnsupportedEventException.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnhanceFrameWork/src/main/java/cn/navy_master/enhanceframework/UnsupportedEventException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/HomeSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/ListenerForMoreRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/ListenerForMoreRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/MoreRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/java/cn/navy_master/recipes/RecipesRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Recipes/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Recipes/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/PlayerMagic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/java/cn/navy_master/WizardStaff/WizardStaffMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WizardStaff/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/WizardStaff/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ClassBuildTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ClassBuildTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/GetNameTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetNameTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MetaProgrammingTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MetaProgrammingTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/FollowTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/FollowTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/FrostArmorTask.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/FrostArmorTask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/PlayerDamageListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/PlayerDamageListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/PlayerHandBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/PlayerHandBook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/WizardStaffListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/WizardStaffListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/WizardStaffMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/WizardStaffMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/WizardStaff/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/BossBattleMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/BossBattleMain.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/BossIllusioner.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/BossIllusioner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/bossbattle/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/EnhanceHandle.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/EnhanceHandle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/MagicExecutor.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/MagicExecutor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/MagicManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/MagicManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/PlayerMagic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/PlayerMagic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/UnsupportedEventException.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/UnsupportedEventException.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/enhanceframework/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/Assemble.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/Assemble.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/FishStickListener.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/FishStickListener.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/HomeBack.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/HomeBack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/HomeSetter.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/HomeSetter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/ListenerForMoreRecipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/ListenerForMoreRecipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/MoreRecipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/MoreRecipes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/RecipesRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/RecipesRegister.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/Wabbajack.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/Wabbajack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/cn/navy_master/recipes/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/cn/navy_master/recipes/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/org/example/ExampleMagic.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/org/example/ExampleMagic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/org/example/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/org/example/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/org/example/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/org/example/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/main/java/org/example/ExampleMagic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/maven-repo/cn/navy_master/EnhanceFrameWork/maven-metadata.xml.sha1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/EconomicListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/EconomicListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Economics/src/main/java/cn/navy_master/economics/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614304383621</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add more playable things, fix bugs, add new module economic">
+      <created>1614847072960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614847072960</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +264,8 @@
     <MESSAGE value="update repo" />
     <MESSAGE value="add more playable things,and fix an important bug" />
     <MESSAGE value="add more playable things" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more playable things" />
+    <MESSAGE value="add more playable things, fix bugs, add new module economic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more playable things, fix bugs, add new module economic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

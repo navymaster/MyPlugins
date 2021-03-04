@@ -2,6 +2,7 @@ package cn.navy_master.economics;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -64,7 +65,23 @@ public class Shop {
             if(transactions.size()>start_at+i)
                 in.setItem(i+9,transactions.get(start_at+i).getThings());
         }
-        /*if(transactions.size()>start_at+36){
+        ItemStack is=new ItemStack(Material.TRIDENT);
+        ItemMeta im=is.getItemMeta();
+        if(page!=1){
+            im.setDisplayName("上一页");
+            is.setItemMeta(im);
+            in.setItem(45,is);
+        }
+        if(transactions.size()>=start_at+36){
+            im.setDisplayName("下一页");
+            is.setItemMeta(im);
+            in.setItem(53,is);
+        }
+        im.setDisplayName("数量为页码");
+        is.setItemMeta(im);
+        is.setAmount(page);
+        in.setItem(49,is);
+        /*if(){
             in.setItem();
         }*/
     }
@@ -83,6 +100,22 @@ public class Shop {
             if(recoveryList.size()>start_at+i)
                 in.setItem(i+9,recoveryList.get(start_at+i).getThings());
         }
+        ItemStack is=new ItemStack(Material.TRIDENT);
+        ItemMeta im=is.getItemMeta();
+        if(page!=1){
+            im.setDisplayName("上一页");
+            is.setItemMeta(im);
+            in.setItem(45,is);
+        }
+        if(recoveryList.size()>=start_at+36){
+            im.setDisplayName("下一页");
+            is.setItemMeta(im);
+            in.setItem(53,is);
+        }
+        im.setDisplayName("数量为页码");
+        is.setItemMeta(im);
+        is.setAmount(page);
+        in.setItem(49,is);
         /*if(transactions.size()>start_at+36){
             in.setItem();
         }*/
@@ -109,9 +142,22 @@ public class Shop {
             if(my.size()>start_at+i)
                 in.setItem(i+9,my.get(start_at+i).getThings());
         }
-        /*if(transactions.size()>start_at+36){
-            in.setItem();
-        }*/
+        ItemStack is=new ItemStack(Material.TRIDENT);
+        ItemMeta im=is.getItemMeta();
+        if(page!=1){
+            im.setDisplayName("上一页");
+            is.setItemMeta(im);
+            in.setItem(45,is);
+        }
+        if(my.size()>=start_at+36){
+            im.setDisplayName("下一页");
+            is.setItemMeta(im);
+            in.setItem(53,is);
+        }
+        im.setDisplayName("数量为页码");
+        is.setItemMeta(im);
+        is.setAmount(page);
+        in.setItem(49,is);
     }
 
     /**
@@ -382,6 +428,11 @@ public class Shop {
                 if(t.getThings().getAmount()!=0)
                     show_trading(i,t);
                 else{
+                    for(Player p:Bukkit.getOnlinePlayers()){
+                        if(t.getOwner().equals(p.getName())){
+                            p.sendMessage("[市集提醒]你有一个商品已经售卖一空");
+                        }
+                    }
                     transactions.remove(t);
                     shop_view(buyer);
                 }

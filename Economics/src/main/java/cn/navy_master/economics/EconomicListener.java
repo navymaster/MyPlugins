@@ -1,5 +1,6 @@
 package cn.navy_master.economics;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -33,18 +34,30 @@ public class EconomicListener implements Listener {
             if(n<54) {
                 if (e.getInventory().getItem(0).getType().equals(Material.STONE)) {
                     mode = Shop.LIST;
-                    if (e.getRawSlot() > 8) {
+                    if (e.getRawSlot() > 8&&e.getRawSlot()<45) {
                         ItemStack is = e.getInventory().getItem(e.getRawSlot());
                         if (!Objects.isNull(is)) {
                             int slot = e.getRawSlot() - 9;
                             Shop.getInstance().show_trading(e.getInventory(), Shop.getInstance().transactions.get(slot));
                         }
                     }
+                    if(e.getRawSlot()==45){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_transactions(e.getInventory(),page-1);
+                        }
+                    }
+                    if(e.getRawSlot()==53){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_transactions(e.getInventory(),page+1);
+                        }
+                    }
                     e.setCancelled(true);
                 }
                 if (e.getInventory().getItem(2).getType().equals(Material.STONE)) {
                     mode = Shop.RECOVERY;
-                    if (e.getRawSlot() > 8) {
+                    if (e.getRawSlot() > 8&&e.getRawSlot()<45) {
                         ItemStack is = e.getInventory().getItem(e.getRawSlot());
                         if (!Objects.isNull(is)) {
                             int slot = e.getRawSlot() - 9;
@@ -58,6 +71,18 @@ public class EconomicListener implements Listener {
                                         break;
                                     }
                             }
+                        }
+                    }
+                    if(e.getRawSlot()==45){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_recovery(e.getInventory(),page-1);
+                        }
+                    }
+                    if(e.getRawSlot()==53){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_recovery(e.getInventory(),page+1);
                         }
                     }
                     e.setCancelled(true);
@@ -81,16 +106,30 @@ public class EconomicListener implements Listener {
                             Shop.getInstance().pushTranAsSystem(e.getInventory());
                     }
                     if (n == 53) {
-                        if (!Objects.isNull(e.getInventory().getItem(29)))
+                        if (!Objects.isNull(e.getInventory().getItem(29))) {
+
                             Shop.getInstance().pushTran(e.getInventory());
+                        }
                     }
                 }
                 if (e.getInventory().getItem(6).getType().equals(Material.STONE)) {
                     mode = Shop.REMOVETRA;
-                    if (e.getRawSlot() > 8) {
+                    if (e.getRawSlot() > 8&&e.getRawSlot()<45) {
                         ItemStack is = e.getInventory().getItem(e.getRawSlot());
                         Shop.getInstance().removeTran(is, (Player) e.getWhoClicked());
                         Shop.getInstance().show_my_trade(e.getInventory(), -1);
+                    }
+                    if(e.getRawSlot()==45){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_my_trade(e.getInventory(),page-1);
+                        }
+                    }
+                    if(e.getRawSlot()==53){
+                        ItemStack is = e.getInventory().getItem(e.getRawSlot());
+                        if(!Objects.isNull(is)){
+                            Shop.getInstance().show_my_trade(e.getInventory(),page+1);
+                        }
                     }
                     e.setCancelled(true);
                 }
@@ -101,6 +140,7 @@ public class EconomicListener implements Listener {
                     }
                     e.setCancelled(true);
                 }
+                if(mode==-1)e.setCancelled(true);
             }
             if(n<9) {
                 if(mode==Shop.NEWTRA){
@@ -111,7 +151,7 @@ public class EconomicListener implements Listener {
                 }
                 if (n == 0) {
                     if (e.getInventory().getItem(0).getType().equals(Material.GRASS_BLOCK))
-                        Shop.getInstance().show_transactions(e.getInventory(), page);
+                        Shop.getInstance().show_transactions(e.getInventory(), -1);
                     e.setCancelled(true);
                 }
                 if (n == 2) {
@@ -130,7 +170,7 @@ public class EconomicListener implements Listener {
                     e.setCancelled(true);
                 }
             }
-            if(mode==-1)e.setCancelled(true);
+            //Bukkit.getLogger().info("点击位置为："+n);
         }
     }
 }
